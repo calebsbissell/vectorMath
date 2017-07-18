@@ -21,4 +21,10 @@ public class VectorTest {
 		assertEquals(2, threeDimensionalVector.getY(), 0.000001);
 		assertEquals(3, threeDimensionalVector.getZ(), 0.000001);
 	}
+	
+	@Test
+	public void shouldObtainTheCorrectLengthOfATwoDimensionalVector() {
+		Vector twoDimensionalVector = new Vector(3, 4);
+		assertEquals(5, twoDimensionalVector.getLength(), 0.000001);
+	}
 }
