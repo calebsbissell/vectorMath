@@ -11,6 +11,7 @@ public class VectorTest {
 		Vector twoDimensionalVector = new Vector(1, 2);
 		assertEquals(1, twoDimensionalVector.getX(), 0.000001);
 		assertEquals(2, twoDimensionalVector.getY(), 0.000001);
+		assertEquals(0, twoDimensionalVector.getZ(), 0.000001);
 	}
 
 	@Test
