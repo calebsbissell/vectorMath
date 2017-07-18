@@ -27,4 +27,9 @@ public class VectorTest {
 		Vector twoDimensionalVector = new Vector(3, 4);
 		assertEquals(5, twoDimensionalVector.getLength(), 0.000001);
 	}
+	@Test
+	public void shouldObtainTheCorrectLengthOfAThreeDimensionalVector() {
+		Vector threeDimensionalVector = new Vector(1, 1, 1);
+		assertEquals(Math.sqrt(3), threeDimensionalVector.getLength(), 0.000001);
+	}
 }
