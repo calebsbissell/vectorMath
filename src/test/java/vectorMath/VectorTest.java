@@ -32,4 +32,22 @@ public class VectorTest {
 		Vector threeDimensionalVector = new Vector(1, 1, 1);
 		assertEquals(Math.sqrt(3), threeDimensionalVector.getLength(), 0.000001);
 	}
+	@Test
+	public void shouldAddTwoVectorsCorrectly() {
+		Vector twoDimensionalVector = new Vector(3, 4);
+		Vector threeDimensionalVector = new Vector(1, 1, 1);
+		threeDimensionalVector.addExact(twoDimensionalVector);
+		assertEquals(4, threeDimensionalVector.getX(), 0.000001);
+		assertEquals(5, threeDimensionalVector.getY(), 0.000001);
+		assertEquals(1, threeDimensionalVector.getZ(), 0.000001);
+	}
+	@Test
+	public void shouldSubtractTwoVectorsCorrectly() {
+		Vector twoDimensionalVector = new Vector(3, 4);
+		Vector threeDimensionalVector = new Vector(1, 1, 1);
+		threeDimensionalVector.subtractExact(twoDimensionalVector);
+		assertEquals(-2, threeDimensionalVector.getX(), 0.000001);
+		assertEquals(-3, threeDimensionalVector.getY(), 0.000001);
+		assertEquals(1, threeDimensionalVector.getZ(), 0.000001);
+	}
 }

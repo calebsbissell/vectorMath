@@ -1,17 +1,16 @@
 package vectorMath;
 
 public class Vector {
-	private double x,y,z;
-	
-	public Vector(double x, double y) {
-		this.x = x;
-		this.y = y;
-	}
-	
+	private double x, y, z;
+
 	public Vector(double x, double y, double z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
+	}
+
+	public Vector(double x, double y) {
+		this(x, y, 0);
 	}
 
 	public double getX() {
@@ -27,7 +26,20 @@ public class Vector {
 	}
 
 	public double getLength() {
-		return Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2)+Math.pow(z, 2));
+		return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
 	}
-	
+
+	public void addExact(Vector vector) {
+		x += vector.x;
+		y += vector.y;
+		z += vector.z;
+	}
+
+	public void subtractExact(Vector vector) {
+		x -= vector.x;
+		y -= vector.y;
+		z -= vector.z;
+		
+	}
+
 }
