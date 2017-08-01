@@ -39,7 +39,11 @@ public class Vector {
 		x -= vector.x;
 		y -= vector.y;
 		z -= vector.z;
-		
+
+	}
+
+	public double dotProduct(Vector vector) {
+		return this.x * vector.x + this.y * vector.y + this.z * vector.z;
 	}
 
 }

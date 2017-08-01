@@ -21,17 +21,19 @@ public class VectorTest {
 		assertEquals(2, threeDimensionalVector.getY(), 0.000001);
 		assertEquals(3, threeDimensionalVector.getZ(), 0.000001);
 	}
-	
+
 	@Test
 	public void shouldObtainTheCorrectLengthOfATwoDimensionalVector() {
 		Vector twoDimensionalVector = new Vector(3, 4);
 		assertEquals(5, twoDimensionalVector.getLength(), 0.000001);
 	}
+
 	@Test
 	public void shouldObtainTheCorrectLengthOfAThreeDimensionalVector() {
 		Vector threeDimensionalVector = new Vector(1, 1, 1);
 		assertEquals(Math.sqrt(3), threeDimensionalVector.getLength(), 0.000001);
 	}
+
 	@Test
 	public void shouldAddTwoVectorsCorrectly() {
 		Vector twoDimensionalVector = new Vector(3, 4);
@@ -41,6 +43,7 @@ public class VectorTest {
 		assertEquals(5, threeDimensionalVector.getY(), 0.000001);
 		assertEquals(1, threeDimensionalVector.getZ(), 0.000001);
 	}
+
 	@Test
 	public void shouldSubtractTwoVectorsCorrectly() {
 		Vector twoDimensionalVector = new Vector(3, 4);
@@ -49,5 +52,12 @@ public class VectorTest {
 		assertEquals(-2, threeDimensionalVector.getX(), 0.000001);
 		assertEquals(-3, threeDimensionalVector.getY(), 0.000001);
 		assertEquals(1, threeDimensionalVector.getZ(), 0.000001);
+	}
+	
+	@Test
+	public void shouldObtainTheCorrectDotProductOfTwoVectors() {
+		Vector firstVector = new Vector(3, 4, 5);
+		Vector secondVector = new Vector(1, 2, 1);
+		assertEquals(16, firstVector.dotProduct(secondVector), 0.000001);
 	}
 }
